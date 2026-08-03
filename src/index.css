@@ -1,5 +1,65 @@
 @import "tailwindcss";
 
 body {
+  margin: 0;
   background-color: #f6f5ed;
+  color: #202d42;
+  font-family: "Poppins", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+@keyframes company-logo-scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.company-logo-marquee {
+  display: flex;
+  width: max-content;
+  max-width: none;
+}
+
+.company-logo-track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: clamp(38px, 4.15vw, 68px);
+  padding-right: clamp(38px, 4.15vw, 68px);
+  animation: company-logo-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+.company-logo-tile {
+  display: flex;
+  width: clamp(92px, 8.5vw, 132px);
+  height: 76px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 3px;
+}
+
+.company-logo-marquee:hover .company-logo-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .company-logo-track {
+    animation-play-state: paused;
+  }
 }
