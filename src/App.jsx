@@ -1,25 +1,19 @@
-import Footer from './Components/Common/Footer'
-import Hero from './Components/Home/Hero'
-import Aboutus from './Components/Home/Aboutus'
-import Categories from './Components/Home/Categories'
-import Manufacture from './Components/Home/Manufacture'
-import WhyChooseus from './Components/Home/WhyChooseus'
-import Products from './Components/Home/Products'
-import Testimonials from './Components/Home/Testimonials'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
+import CanvasBags from './Pages/CanvasBags'
 
-const App = () => {
-  return (
-    <>
-      <Hero />
-      <Aboutus />
-      <Categories />
-      <Manufacture />
-      <WhyChooseus />
-      <Products />
-      <Testimonials />
-      <Footer />
-    </>
-  )
-}
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/canvas-bags" element={<CanvasBags />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  </BrowserRouter>
+)
 
 export default App

@@ -9,7 +9,7 @@ const reasons = [
 
 const WhyChooseus = () => (
   <section className="bg-[#f6f5ed] px-2 pb-2 sm:px-[15px] sm:pb-[15px]">
-    <div className="mx-auto max-w-[1410px] rounded-[20px] bg-white px-5 py-12 sm:px-10 lg:min-h-[880px] lg:px-[66px] lg:py-[70px]">
+    <div className="mx-auto max-w-[1410px] rounded-[20px] bg-white px-5 py-12 sm:px-10 lg:min-h-[800px] lg:px-[66px] lg:py-[70px]">
       <div className="text-center">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d9dd] px-3 py-1 text-[11px] font-medium text-[#1d2b43]"><span className="size-1.5 rounded-full bg-[#ff7900]" /> Why Choose Us</span>
         <h2 className="mx-auto mt-3 max-w-[650px] text-[32px] font-bold leading-[.96] tracking-[-.05em] text-[#202d42] sm:text-[44px] lg:text-[52px]">Manufacturing Excellence<br />That Builds Trust</h2>

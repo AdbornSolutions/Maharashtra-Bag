@@ -4,7 +4,7 @@ import juteBag from '../../assets/Images/p3.png'
 import boppBag from '../../assets/Images/p4.png'
 
 const categories = [
-  { name: 'Canvas bag', image: canvasBag, href: '#canvas-bags' },
+  { name: 'Canvas bag', image: canvasBag, href: '/canvas-bags' },
   { name: 'Non-woven bags', image: nonWovenBag, href: '#non-woven-bags' },
   { name: 'Jute bags', image: juteBag, href: '#jute-bags' },
   { name: 'BOPP bags', image: boppBag, href: '#bopp-bags' },

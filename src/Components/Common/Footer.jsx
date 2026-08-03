@@ -2,6 +2,13 @@ import logo from '../../assets/logo.png'
 
 const quickLinks = ['Home', 'About Us', 'Products', 'Blog', 'Contact Us']
 const productCategories = ['Canvas Bags', 'Non-Woven Bags', 'Jute Bags', 'BOPP Bags']
+const footerHrefs = {
+  Home: '/',
+  'About Us': '/about',
+  Products: '/#products',
+  Blog: '/#blogs',
+  'Contact Us': '/contact',
+}
 
 const Footer = () => (
   <footer className="rounded-t-[28px] bg-[#202d42] px-5 pb-6 pt-10 text-[#f7f7f7] sm:px-10 sm:pt-12 lg:rounded-t-[30px] lg:px-[5.3%] lg:pt-10">
@@ -53,7 +60,7 @@ const FooterLinks = ({ title, items }) => (
   <div>
     <h2 className="text-xl font-medium">{title}</h2>
     <ul className="mt-7 space-y-5 text-[16px] text-[#e5e8ed]">
-      {items.map((item) => <li key={item}><a href={`#${item.toLowerCase().replaceAll(' ', '-')}`} className="hover:text-white">{item}</a></li>)}
+      {items.map((item) => <li key={item}><a href={footerHrefs[item] || `/#${item.toLowerCase().replaceAll(' ', '-')}`} className="hover:text-white">{item}</a></li>)}
     </ul>
   </div>
 )
