@@ -55,7 +55,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-14 flex flex-col gap-4 border-t border-[#536075] pt-5 text-[13px] text-[#e2e5e9] sm:flex-row sm:items-center sm:justify-between lg:mt-24">
-        <div className="flex flex-wrap gap-5"><span>Privacy Policy</span><span>Terms &amp; Conditions</span></div>
+        <div className="flex flex-wrap gap-5"><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link><Link to="/terms-and-conditions" className="hover:text-white">Terms &amp; Conditions</Link></div>
         <p className="text-left sm:text-right">© 2026 Maharashtra Bags. All Rights Reserved. Site Design and Maintained by AdBorn Solutions.</p>
       </div>
     </div>

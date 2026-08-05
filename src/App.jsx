@@ -7,6 +7,8 @@ import CanvasBags from './Pages/CanvasBags'
 import NonWoven from './Pages/NonWoven'
 import JuteBags from './Pages/JuteBags'
 import BoppBags from './Pages/BoppBags'
+import PrivacyPolicy from './Pages/PrivacyPolicy'
+import TermsAndConditions from './Pages/TermsAndConditions'
 const App = () => (
   <BrowserRouter>
     <ScrollToTop />
@@ -18,6 +20,8 @@ const App = () => (
       <Route path="/non-woven" element={<NonWoven />} />
       <Route path="/jute-bags" element={<JuteBags />} />
       <Route path="/bopp-bags" element={<BoppBags />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
