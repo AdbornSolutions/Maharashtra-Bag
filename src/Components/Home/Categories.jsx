@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import canvasBag from '../../assets/Images/p1.png'
 import nonWovenBag from '../../assets/Images/p2.png'
 import juteBag from '../../assets/Images/p3.png'
@@ -5,9 +6,9 @@ import boppBag from '../../assets/Images/p4.png'
 
 const categories = [
   { name: 'Canvas bag', image: canvasBag, href: '/canvas-bags' },
-  { name: 'Non-woven bags', image: nonWovenBag, href: '#non-woven-bags' },
-  { name: 'Jute bags', image: juteBag, href: '#jute-bags' },
-  { name: 'BOPP bags', image: boppBag, href: '#bopp-bags' },
+  { name: 'Non-woven bags', image: nonWovenBag, href: '/non-woven' },
+  { name: 'Jute bags', image: juteBag, href: '/jute-bags' },
+  { name: 'BOPP bags', image: boppBag, href: '/bopp-bags' },
 ]
 
 const Categories = () => (
@@ -24,10 +25,10 @@ const Categories = () => (
 
       <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:mt-7 lg:grid-cols-4 lg:gap-10">
         {categories.map((category) => (
-          <a key={category.name} href={category.href} className="group overflow-hidden rounded-[14px] bg-[#ff7900] shadow-sm">
+          <Link key={category.name} to={category.href} className="group overflow-hidden rounded-[14px] bg-[#ff7900] shadow-sm">
             <img src={category.image} alt={category.name} className="aspect-[.84] w-full object-cover transition-transform duration-300 group-hover:scale-105" />
             <div className="flex h-[45px] items-center justify-center px-3 text-center text-[15px] font-semibold text-white">{category.name}</div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

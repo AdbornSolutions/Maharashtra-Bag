@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from '../Components/Common/Navbar'
 import Footer from '../Components/Common/Footer'
 import heroImage from '../assets/Common/Hero.png'
@@ -35,8 +36,11 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    const formData = new FormData(event.currentTarget)
+    const subject = `Website inquiry from ${formData.get('name')}`
+    const body = ['New website inquiry', '', ...Array.from(formData.entries()).map(([key, value]) => `${key}: ${value || 'Not provided'}`)].join('\n')
     setSubmitted(true)
-    event.currentTarget.reset()
+    window.location.href = `mailto:Maharashtrabags222@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   return (
@@ -50,7 +54,7 @@ const Contact = () => {
           <div className="absolute inset-x-0 bottom-0 z-10 mx-auto max-w-[1260px] px-6 pb-14 sm:px-8 lg:px-0 lg:pb-[54px]">
             <h1 id="contact-title" className="text-[42px] font-bold leading-none sm:text-[50px] lg:text-[56px]">Contact Us</h1>
             <nav className="mt-4 flex items-center gap-1 text-[12px] font-medium" aria-label="Breadcrumb">
-              <a href="/" className="hover:text-[#ff7900]">Home</a><span>/</span><span>Contact Us</span>
+              <Link to="/" className="hover:text-[#ff7900]">Home</Link><span>/</span><span>Contact Us</span>
             </nav>
           </div>
         </div>
@@ -82,13 +86,13 @@ const Contact = () => {
             </aside>
           </div>
 
-          <form onSubmit={handleSubmit} className="rounded-[20px] bg-white px-6 py-10 shadow-[0_18px_35px_rgba(31,42,59,.08)] sm:px-10 lg:px-12 lg:py-12">
+          <form onSubmit={handleSubmit} className="min-w-0 rounded-[20px] bg-white px-5 py-8 shadow-[0_18px_35px_rgba(31,42,59,.08)] sm:px-10 sm:py-10 lg:px-12 lg:py-12">
             <h2 className="text-[30px] font-bold leading-tight text-[#202d42] lg:text-[34px]">Send Us Your Inquiry</h2>
             <div className="mt-9 grid gap-x-5 gap-y-7 sm:grid-cols-2">
               <Field label="Full Name"><input name="name" type="text" required placeholder="Enter your name" className={inputClass} /></Field>
               <Field label="Company"><input name="company" type="text" placeholder="Organization name" className={inputClass} /></Field>
               <Field label="Email"><input name="email" type="email" required placeholder="email@company.com" className={inputClass} /></Field>
-              <Field label="Phone"><input name="phone" type="tel" required placeholder="+91" className={inputClass} /></Field>
+              <Field label="Phone"><input name="phone" type="tel" inputMode="tel" autoComplete="tel" required placeholder="+91" className={inputClass} /></Field>
               <Field label="Country"><input name="country" type="text" placeholder="Target market" className={inputClass} /></Field>
               <Field label="Product Requirement">
                 <select name="product" className={inputClass} defaultValue="Canvas Bags">
@@ -99,7 +103,7 @@ const Contact = () => {
               <Field label="Message" className="sm:col-span-2"><textarea name="message" required rows="4" placeholder="Describe your custom requirements..." className={`${inputClass} h-[105px] resize-y py-3`} /></Field>
             </div>
             <button type="submit" className="mt-9 h-[52px] w-full rounded-[10px] bg-[#ff6b13] text-[13px] font-semibold text-white transition-colors hover:bg-[#e95d08] focus:outline-none focus:ring-2 focus:ring-[#ff6b13] focus:ring-offset-2">Send Inquiry</button>
-            <p className="mt-3 min-h-5 text-center text-[12px] font-medium text-[#27834a]" role="status">{submitted ? 'Thank you. Your inquiry has been received.' : ''}</p>
+            <p className="mt-3 min-h-5 text-center text-[12px] font-medium text-[#27834a]" role="status">{submitted ? 'Your email app is opening with the inquiry ready to send.' : ''}</p>
           </form>
         </div>
       </section>

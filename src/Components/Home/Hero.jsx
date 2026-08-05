@@ -1,6 +1,5 @@
 import Navbar from '../Common/Navbar'
 import heroBackground from '../../assets/Images/HeroBg.png'
-import quoteIcon from '../../assets/Icons/Icon.png'
 
 const benefits = ['Premium Quality Materials', 'Custom Printing & Branding', 'Bulk Manufacturing', 'PAN India Supply']
 
@@ -28,10 +27,6 @@ const Hero = () => (
         <p className="mt-5 max-w-[550px] text-xs leading-[1.35] text-[#fafafa] sm:max-w-[610px] sm:text-[13px] lg:mt-6 lg:max-w-[670px]">
           Delivering sustainable, durable, and fully customized bag solutions for retailers, wholesalers, corporate<br className="hidden lg:block" /> brands, exporters, and packaging companies across India. Combining advanced manufacturing with<br className="hidden lg:block" /> exceptional quality and timely delivery.
         </p>
-        <a href="#products" className="mt-7 flex w-fit items-center overflow-hidden rounded-full bg-[#1c3663] text-xs font-bold transition-transform hover:scale-[1.02] lg:mt-10">
-          <span className="px-5 py-4">Explore Products</span>
-          <span className="mr-1 grid size-9 place-items-center rounded-full bg-[#ff7900]"><img src={quoteIcon} alt="" className="size-4 object-contain" /></span>
-        </a>
       </div>
 
       <div className="absolute inset-x-0 bottom-0 z-10 grid grid-cols-2 gap-x-3 gap-y-3 bg-black/20 px-4 py-5 text-[10px] sm:px-[8%] sm:py-6 sm:text-xs lg:grid-cols-4 lg:gap-5 lg:px-[14.2%] lg:py-10 lg:text-[15px]">

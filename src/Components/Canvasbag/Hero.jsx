@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Navbar from '../Common/Navbar'
 import heroProduct from '../../assets/CanvasBags/HeroProducts.png'
 import quoteIcon from '../../assets/Icons/Icon.png'
@@ -18,10 +19,10 @@ const Hero = () => (
             Durable, reusable, and fully customizable canvas bags manufactured for retail, corporate gifting, promotional campaigns, private-label brands, and international bulk orders.
           </p>
 
-          <a href="/contact" className="mt-10 flex w-fit items-center overflow-hidden rounded-full bg-[#1c3158] text-[12px] font-semibold text-white transition-transform hover:scale-[1.02]">
+          <Link to="/contact" className="mt-10 flex w-fit items-center overflow-hidden rounded-full bg-[#1c3158] text-[12px] font-semibold text-white transition-transform hover:scale-[1.02]">
             <span className="px-7 py-4">Get a Quote</span>
             <span className="mr-1 grid size-10 place-items-center rounded-full bg-[#ff6b13]"><img src={quoteIcon} alt="" className="size-4 object-contain" /></span>
-          </a>
+          </Link>
 
           <div className="mt-12 grid max-w-[590px] gap-x-8 gap-y-4 border-t border-[#dfe4eb] pt-8 sm:grid-cols-2">
             {features.map((feature) => (

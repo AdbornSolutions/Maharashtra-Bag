@@ -1,6 +1,6 @@
 import Hero from '../Components/Canvasbag/Hero'
 import Strenght from '../Components/Canvasbag/Strenght'
-import Value from '../Components/Canvasbag/Value'
+import Products from '../Components/Canvasbag/Products'
 import Brands from '../Components/Canvasbag/Brands'
 import Printing from '../Components/Canvasbag/Printing'
 import Support from '../Components/Canvasbag/Support'
@@ -11,7 +11,7 @@ const CanvasBags = () => (
   <main>
     <Hero />
     <Strenght />
-    <Value />
+    <Products />
     <Brands />
     <Printing />
     <Support />
