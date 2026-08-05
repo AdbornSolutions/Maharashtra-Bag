@@ -34,7 +34,7 @@ const Manufacture = () => (
             <div className="flex items-center gap-2"><div className="flex -space-x-2"><span className="size-7 rounded-full border-2 border-white bg-[#a96f55]" /><span className="size-7 rounded-full border-2 border-white bg-[#66717d]" /><span className="size-7 rounded-full border-2 border-white bg-[#c6937d]" /></div><span className="grid size-7 place-items-center rounded-full bg-[#ff7900] text-xl font-medium text-white">+</span></div>
             <div className="mt-3 flex items-end gap-2"><span className="text-xl text-[#ff7900]">★</span><strong className="text-[25px] leading-none text-[#202020]">4.9</strong><span className="pb-0.5 text-[10px] font-semibold">Customer Satisfaction</span></div>
             <p className="mt-4 text-[12px] leading-[1.45] text-[#76777a]">Manufacturing reliable, high quality bag solutions for retailers, wholesalers, corporate brands, and distributors.</p>
-            <a href="#quote" className="mt-4 flex w-fit items-center overflow-hidden rounded-full bg-[#1d3765] text-[11px] font-bold text-white"><span className="px-5 py-3">Get a Quote</span><span className="mr-1 grid size-8 place-items-center rounded-full bg-[#ff7900]"><img src={quoteIcon} alt="" className="size-3.5 object-contain" /></span></a>
+            <Link to="/contact" className="mt-4 flex w-fit items-center overflow-hidden rounded-full bg-[#1d3765] text-[11px] font-bold text-white"><span className="px-5 py-3">Get a Quote</span><span className="mr-1 grid size-8 place-items-center rounded-full bg-[#ff7900]"><img src={quoteIcon} alt="" className="size-3.5 object-contain" /></span></Link>
           </div>
         </div>
       </div>
@@ -43,3 +43,4 @@ const Manufacture = () => (
 )
 
 export default Manufacture
+import { Link } from 'react-router-dom'

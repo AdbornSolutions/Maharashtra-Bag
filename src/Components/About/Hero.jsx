@@ -16,7 +16,7 @@ const Hero = () => (
           About Us
         </h1>
         <nav className="mt-3 flex items-center gap-1 text-[12px] font-medium text-white" aria-label="Breadcrumb">
-          <a href="/" className="transition-colors hover:text-[#ff7900]">Home</a>
+          <Link to="/" className="transition-colors hover:text-[#ff7900]">Home</Link>
           <span aria-hidden="true">/</span>
           <span>About Us</span>
         </nav>
@@ -26,3 +26,4 @@ const Hero = () => (
 )
 
 export default Hero
+import { Link } from 'react-router-dom'

@@ -16,10 +16,10 @@ const Aboutus = () => (
           <p>Whether you require reusable shopping bags, promotional bags, packaging bags, or custom-printed bags, our team ensures every product is manufactured with precision and delivered on time.</p>
         </div>
         <div className="mt-9 flex flex-wrap items-center gap-4 border-t border-[#dddcd4] pt-7">
-          <a href="#quote" className="flex items-center overflow-hidden rounded-full bg-[#1d3765] text-[13px] font-bold text-white transition-transform hover:scale-[1.02]">
+          <Link to="/contact" className="flex items-center overflow-hidden rounded-full bg-[#1d3765] text-[13px] font-bold text-white transition-transform hover:scale-[1.02]">
             <span className="px-6 py-4">Get a Quote</span>
             <span className="mr-1 grid size-9 place-items-center rounded-full bg-[#ff7900]"><img src={quoteIcon} alt="" className="size-4 object-contain" /></span>
-          </a>
+          </Link>
           <span className="grid size-9 place-items-center rounded-full bg-[#1d3765] text-white" aria-hidden="true">
             <svg viewBox="0 0 24 24" className="size-5 fill-none stroke-current" strokeWidth="1.8"><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><path d="M4 13h3v5H5a1 1 0 0 1-1-1v-4Zm16 0h-3v5h2a1 1 0 0 0 1-1v-4ZM12 20h3" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </span>
@@ -35,3 +35,4 @@ const Aboutus = () => (
 )
 
 export default Aboutus
+import { Link } from 'react-router-dom'

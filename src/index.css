@@ -11,6 +11,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 *, *::before, *::after {
@@ -19,6 +20,28 @@ html {
 
 img {
   display: block;
+}
+
+button,
+a,
+summary,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @keyframes company-logo-scroll {
@@ -56,10 +79,4 @@ img {
 
 .company-logo-marquee:hover .company-logo-track {
   animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .company-logo-track {
-    animation-play-state: paused;
-  }
 }
