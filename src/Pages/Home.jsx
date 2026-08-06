@@ -8,7 +8,6 @@ import Products from '../Components/Home/Products'
 import Testimonials from '../Components/Home/Testimonials'
 import CompanyLogos from '../Components/Home/CompanyLogos'
 import Blogs from '../Components/Home/Blogs'
-import Stats from '../Components/Home/Stats'
 
 const Home = () => (
   <main>
