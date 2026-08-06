@@ -16,16 +16,16 @@ const FeatureCard = ({ title, children, icon }) => (
 )
 
 const Manufacture = () => (
-  <section className="bg-[#f6f5ed] px-5 py-16 sm:px-10 lg:px-[5.3%] lg:py-[95px]">
-    <div className="mx-auto grid max-w-[1260px] items-center gap-12 lg:grid-cols-[.94fr_1.06fr] lg:gap-16">
-      <div className="relative mx-auto w-full max-w-[540px]">
+  <section className="bg-[#f6f5ed] px-5 py-14 sm:px-[4%] sm:py-16 lg:py-[clamp(76px,7vw,125px)]">
+    <div className="mx-auto grid w-full max-w-[1800px] items-center gap-12 lg:grid-cols-[.94fr_1.06fr] lg:gap-[clamp(56px,6vw,110px)]">
+      <div className="relative mx-auto w-full max-w-[760px]">
         <img src={manufacturingImage} alt="Custom bag manufacturing process" className="w-full rounded-[18px] object-cover" />
       </div>
 
       <div>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d6cb] px-3 py-1 text-[11px] font-medium text-[#1d2b43]"><span className="size-1.5 rounded-full bg-[#ff7900]" /> Custom Manufacturing</span>
-        <h2 className="mt-4 max-w-[650px] text-[36px] font-bold leading-[1.02] tracking-[-.05em] text-[#202d42] sm:text-[45px] lg:text-[52px]">Tailored Bag Solutions<br />Designed Around Your Brand</h2>
-        <p className="mt-6 max-w-[670px] text-[13px] leading-[1.55] text-[#6c6d70]">Every business has unique packaging requirements, and we're here to bring your vision to life. Maharashtra Bag offers fully customized manufacturing solutions for Canvas, Non-Woven, Jute, and BOPP bags. From material selection and dimensions to logo printing and finishing, we create products that perfectly align with your brand identity and business goals.</p>
+        <h2 className="mt-4 max-w-[850px] text-[clamp(34px,7.5vw,44px)] font-bold leading-[1.02] tracking-[-.05em] text-[#202d42] md:text-[clamp(42px,3.2vw,62px)]">Tailored Bag Solutions<br />Designed Around Your Brand</h2>
+        <p className="mt-6 max-w-[850px] text-[clamp(13px,1vw,16px)] leading-[1.6] text-[#6c6d70]">Every business has unique packaging requirements, and we're here to bring your vision to life. Maharashtra Bag offers fully customized manufacturing solutions for Canvas, Non-Woven, Jute, and BOPP bags. From material selection and dimensions to logo printing and finishing, we create products that perfectly align with your brand identity and business goals.</p>
         <ul className="mt-5 space-y-3 border-t border-[#d2d1c9] pt-5"><CheckItem>Complete customization of size, material, color, and design</CheckItem><CheckItem>Premium-quality printing for logos, branding, and promotional graphics</CheckItem><CheckItem>Flexible bulk manufacturing with consistent quality and timely delivery</CheckItem></ul>
 
         <div className="mt-6 grid gap-4 md:grid-cols-[1.25fr_.9fr]">

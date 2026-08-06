@@ -9,19 +9,19 @@ const posts = [
 ]
 
 const Blogs = () => (
-  <section id="blogs" className="bg-[#f6f5ed] px-5 py-16 sm:px-10 lg:px-[5.3%] lg:py-[82px]" aria-labelledby="blogs-heading">
-    <div className="mx-auto max-w-[1260px]">
+  <section id="blogs" className="bg-[#f6f5ed] px-5 py-14 sm:px-[4%] sm:py-16 lg:py-[clamp(72px,7vw,120px)]" aria-labelledby="blogs-heading">
+    <div className="mx-auto w-full max-w-[1800px]">
       <div className="text-center">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d6cb] px-3 py-1 text-[11px] font-medium text-[#1d2b43]"><span className="size-1.5 rounded-full bg-[#ff7900]" />Latest Blogs</span>
-        <h2 id="blogs-heading" className="mx-auto mt-4 max-w-[650px] text-[34px] font-bold leading-[0.98] text-[#202d42] sm:text-[44px] lg:text-[48px]">Insights from the World of<br className="hidden sm:block" /> Sustainable Packaging</h2>
+        <h2 id="blogs-heading" className="mx-auto mt-4 max-w-[900px] text-[clamp(34px,7.5vw,44px)] font-bold leading-[0.98] text-[#202d42] md:text-[clamp(42px,3.2vw,62px)]">Insights from the World of<br className="hidden sm:block" /> Sustainable Packaging</h2>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3 lg:mt-12 lg:gap-5">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-[clamp(22px,2.2vw,42px)]">
         {posts.map((post) => (
           <article key={post.title} className="group flex min-w-0 flex-col overflow-hidden rounded-[16px] bg-white p-2">
             <div className="overflow-hidden rounded-[11px]"><img src={post.image} alt="" className="aspect-[1.29/1] w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" loading="lazy" /></div>
             <div className="flex flex-1 flex-col px-4 pb-3 pt-5">
-              <h3 className="text-[17px] font-bold leading-[1.38] text-[#161616] lg:min-h-[48px]">{post.title}</h3>
+              <h3 className="text-[clamp(16px,1.1vw,20px)] font-bold leading-[1.38] text-[#161616] lg:min-h-[54px]">{post.title}</h3>
               <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#ece9df] pt-4 text-[12px]">
                 <time className="min-w-0 truncate text-[#88898c]" dateTime="2026-02-14">{post.date}</time>
                 <span className="shrink-0 font-bold text-[#161616]">Article</span>

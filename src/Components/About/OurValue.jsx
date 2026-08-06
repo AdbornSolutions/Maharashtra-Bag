@@ -37,24 +37,24 @@ const values = [
 ]
 
 const OurValue = () => (
-  <section className="bg-[#f6f5ed] px-5 py-16 sm:px-10 lg:px-[5.3%] lg:py-[72px]" aria-labelledby="values-heading">
-    <div className="mx-auto max-w-[1260px]">
+  <section className="bg-[#f6f5ed] px-5 py-14 sm:px-[4%] sm:py-16 lg:py-[clamp(68px,6vw,110px)]" aria-labelledby="values-heading">
+    <div className="mx-auto w-full max-w-[1800px]">
       <div className="text-center">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d6cb] px-3 py-1 text-[11px] font-medium text-[#1d2b43]">
           <span className="size-1.5 rounded-full bg-[#ff7900]" />
           Our Core Value
         </span>
-        <h2 id="values-heading" className="mx-auto mt-5 max-w-[650px] text-[36px] font-bold leading-[1.08] text-[#202d42] sm:text-[44px] lg:text-[48px]">
+        <h2 id="values-heading" className="mx-auto mt-5 max-w-[900px] text-[clamp(34px,7.5vw,44px)] font-bold leading-[1.04] text-[#202d42] md:text-[clamp(40px,3.2vw,62px)]">
           The Principles That Drive<br className="hidden sm:block" /> Everything We Do
         </h2>
       </div>
 
-      <div className="mt-12 grid gap-5 md:grid-cols-3 lg:mt-[58px]">
+      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-[58px] lg:grid-cols-3 lg:gap-[clamp(22px,2.2vw,42px)]">
         {values.map((value) => (
-          <article key={value.title} className="flex min-h-[335px] flex-col items-center justify-center rounded-[20px] bg-white px-7 py-10 text-center sm:px-9">
+          <article key={value.title} className="flex min-h-[300px] flex-col items-center justify-center rounded-[20px] bg-white px-7 py-10 text-center sm:px-9 lg:min-h-[340px] lg:px-[clamp(34px,3vw,58px)]">
             <span className="grid size-12 place-items-center rounded-full bg-[#ff6b13] text-white">{value.icon}</span>
-            <h3 className="mt-12 text-[18px] font-bold leading-tight text-[#171717]">{value.title}</h3>
-            <p className="mt-6 max-w-[315px] text-[13px] leading-[1.7] text-[#68696d]">{value.text}</p>
+            <h3 className="mt-10 text-[clamp(18px,1.2vw,22px)] font-bold leading-tight text-[#171717]">{value.title}</h3>
+            <p className="mt-6 max-w-[390px] text-[clamp(13px,.85vw,15px)] leading-[1.7] text-[#68696d]">{value.text}</p>
           </article>
         ))}
       </div>

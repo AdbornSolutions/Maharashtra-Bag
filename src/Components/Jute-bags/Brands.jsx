@@ -9,11 +9,11 @@ const customizationOptions = [
 ]
 
 const Brands = () => (
-  <section className="bg-[#f6f5ed] px-5 py-16 sm:px-10 lg:px-[5.3%] lg:py-[82px]" aria-labelledby="customize-heading">
-    <div className="mx-auto grid max-w-[1260px] items-center gap-16 lg:grid-cols-[.9fr_1.1fr] lg:gap-[92px]">
-      <div className="relative mx-auto w-full max-w-[500px] lg:mx-0">
+  <section className="bg-[#f6f5ed] px-5 py-14 sm:px-[4%] sm:py-16 lg:py-[clamp(72px,7vw,120px)]" aria-labelledby="customize-heading">
+    <div className="mx-auto grid w-full max-w-[1800px] items-center gap-16 md:grid-cols-[.9fr_1.1fr] lg:gap-[clamp(60px,7vw,130px)]">
+      <div className="relative mx-auto w-full max-w-[720px] md:mx-0">
         <img src={customImage} alt="Custom bag printing and sampling workshop" className="h-auto w-full rounded-[20px] object-contain" />
-        <aside className="absolute -bottom-7 right-0 w-[218px] rounded-[12px] bg-white px-5 py-4 shadow-[0_16px_35px_rgba(28,49,88,.14)] sm:-right-5">
+        <aside className="absolute -bottom-7 right-0 w-[min(218px,82%)] rounded-[12px] bg-white px-5 py-4 shadow-[0_16px_35px_rgba(28,49,88,.14)] sm:-right-5">
           <span className="text-[9px] font-semibold uppercase tracking-[.17em] text-[#ff6b13]">Sampling</span>
           <p className="mt-2 text-[11px] leading-[1.55] text-[#26344e]">Pre-production samples approved before every bulk run.</p>
         </aside>
@@ -24,12 +24,12 @@ const Brands = () => (
           <span className="size-1.5 rounded-sm bg-[#ff6b13]" />
           Customization
         </span>
-        <h2 id="customize-heading" className="mt-5 text-[37px] font-bold leading-[1.06] text-[#202d42] sm:text-[45px] lg:text-[50px]">Customize Every Detail</h2>
-        <p className="mt-7 max-w-[650px] text-[13px] leading-[1.8] text-[#687b99] sm:text-[14px]">
+        <h2 id="customize-heading" className="mt-5 text-[clamp(35px,8vw,46px)] font-bold leading-[1.06] text-[#202d42] md:text-[clamp(42px,3.2vw,62px)]">Customize Every Detail</h2>
+        <p className="mt-7 max-w-[850px] text-[clamp(13px,.9vw,16px)] leading-[1.75] text-[#687b99]">
           We offer comprehensive OEM services. Configure your packaging to align perfectly with your brand guidelines and structural requirements.
         </p>
 
-        <div className="mt-9 flex max-w-[650px] flex-wrap gap-3">
+        <div className="mt-9 flex max-w-[850px] flex-wrap gap-3">
           {customizationOptions.map((option) => (
             <span key={option} className="inline-flex min-h-9 items-center justify-center rounded-full border border-[#d9dde3] bg-transparent px-4 py-2 text-center text-[10px] font-medium text-[#25334b]">
               {option}
