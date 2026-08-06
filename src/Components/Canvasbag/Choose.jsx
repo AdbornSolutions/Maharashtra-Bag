@@ -8,23 +8,23 @@ const reasons = [
 ]
 
 const Choose = () => (
-  <section className="bg-[#f6f5ed] px-5 py-16 sm:px-10 lg:px-[5.3%] lg:py-[82px]" aria-labelledby="choose-heading">
-    <div className="mx-auto max-w-[1260px]">
+  <section className="bg-[#f6f5ed] px-5 py-14 sm:px-[4%] sm:py-16 lg:py-[clamp(72px,7vw,120px)]" aria-labelledby="choose-heading">
+    <div className="mx-auto w-full max-w-[1800px]">
       <span className="inline-flex items-center gap-2 rounded-full border border-[#d2d3cf] px-4 py-1 text-[11px] font-medium text-[#222a38]">
         <span className="size-1.5 rounded-sm bg-[#ff6b13]" />
         Why Choose Us
       </span>
-      <h2 id="choose-heading" className="mt-6 max-w-[660px] text-[39px] font-bold leading-[1.08] text-[#202d42] sm:text-[48px] lg:text-[52px]">
+      <h2 id="choose-heading" className="mt-6 max-w-[900px] text-[clamp(36px,8vw,48px)] font-bold leading-[1.06] text-[#202d42] md:text-[clamp(44px,3.3vw,64px)]">
         Why Buyers Work with<br className="hidden sm:block" /> Maharashtra Bag
       </h2>
 
-      <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-[66px] lg:grid-cols-3 lg:gap-6">
+      <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:mt-[66px] lg:grid-cols-3 lg:gap-[clamp(22px,2vw,38px)]">
         {reasons.map((reason, index) => (
-          <article key={reason.title} className="flex min-h-[200px] flex-col rounded-[16px] border border-[#d9dee6] bg-white px-7 py-6 sm:px-8">
+          <article key={reason.title} className="flex min-h-[200px] flex-col rounded-[16px] border border-[#d9dee6] bg-white px-7 py-6 sm:px-8 lg:min-h-[220px] lg:p-[clamp(28px,2vw,38px)]">
             <span className="text-[36px] font-semibold leading-none text-[#edf0f4]">{String(index + 1).padStart(2, '0')}</span>
             <div className="mt-auto pt-7">
-              <h3 className="text-[17px] font-semibold leading-[1.35] text-[#25334c]">{reason.title}</h3>
-              <p className="mt-3 text-[13px] leading-[1.6] text-[#71809a]">{reason.text}</p>
+              <h3 className="text-[clamp(17px,1.15vw,21px)] font-semibold leading-[1.35] text-[#25334c]">{reason.title}</h3>
+              <p className="mt-3 text-[clamp(13px,.85vw,15px)] leading-[1.6] text-[#71809a]">{reason.text}</p>
             </div>
           </article>
         ))}

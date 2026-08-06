@@ -12,7 +12,7 @@ const navigationItems = [
   { label: 'BOPP Bags', href: '/bopp-bags' },
 ]
 
-const Navbar = ({ variant = 'default' }) => {
+const Navbar = ({ variant = 'default', fluid = false }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isTransparent = variant === 'transparent'
   const isLight = variant === 'light'
@@ -26,8 +26,8 @@ const Navbar = ({ variant = 'default' }) => {
   }, [isMenuOpen])
 
   return (
-    <header className={`${isTransparent ? 'absolute inset-x-0 top-0 border-b border-white/10 bg-black/20 text-white' : isLight ? 'relative border-b border-[#e4e7eb] bg-white text-[#17243b]' : 'sticky top-0 border-b border-white/10 bg-black text-white'} z-50 w-full px-3 py-3 sm:px-8 lg:px-[5.3%] lg:py-5`}>
-      <nav className="mx-auto flex max-w-[1260px] items-center justify-between gap-3 sm:gap-5" aria-label="Main navigation">
+    <header className={`${isTransparent ? 'absolute inset-x-0 top-0 border-b border-white/10 bg-black/20 text-white' : isLight ? 'relative border-b border-[#e4e7eb] bg-white text-[#17243b]' : 'sticky top-0 border-b border-white/10 bg-black text-white'} ${fluid ? 'lg:px-[4%]' : 'lg:px-[5.3%]'} z-50 w-full px-3 py-3 sm:px-8 lg:py-5`}>
+      <nav className={`${fluid ? 'w-full max-w-none' : 'mx-auto max-w-[1260px]'} flex items-center justify-between gap-3 sm:gap-5`} aria-label="Main navigation">
         <Link to="/" className="shrink-0" aria-label="Maharashtra Bags home">
           <img src={logo} alt="Maharashtra Bags" className="h-[48px] w-[145px] rounded-xl object-contain sm:h-[62px] sm:w-[194px]" />
         </Link>

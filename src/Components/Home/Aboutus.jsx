@@ -2,16 +2,16 @@ import aboutImage from '../../assets/Images/Aboutus.png'
 import quoteIcon from '../../assets/Icons/Icon.png'
 
 const Aboutus = () => (
-  <section id="about" className="bg-[#f6f5ed] px-5 py-16 sm:px-10 lg:px-[5.3%] lg:py-[82px]">
-    <div className="mx-auto grid max-w-[1260px] items-center gap-10 lg:grid-cols-[1.08fr_.92fr] lg:gap-12">
+  <section id="about" className="bg-[#f6f5ed] px-5 py-14 sm:px-[4%] sm:py-16 lg:py-[clamp(72px,7vw,120px)]">
+    <div className="mx-auto grid w-full max-w-[1800px] items-center gap-10 md:grid-cols-2 lg:grid-cols-[1.08fr_.92fr] lg:gap-[clamp(48px,6vw,110px)]">
       <div>
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d6cb] px-3 py-1 text-[11px] font-medium text-[#1d2b43]">
           <span className="size-1.5 rounded-full bg-[#ff7900]" /> About Us
         </span>
-        <h2 className="mt-4 max-w-[570px] text-[35px] font-bold leading-[1.05] tracking-[-.05em] text-[#202d42] sm:text-[44px] lg:text-[52px]">
+        <h2 className="mt-4 max-w-[760px] text-[clamp(34px,7.5vw,44px)] font-bold leading-[1.05] tracking-[-.05em] text-[#202d42] md:text-[clamp(40px,3.3vw,64px)]">
           Your Trusted Manufacturing Partner
         </h2>
-        <div className="mt-6 max-w-[610px] space-y-4 text-[14px] leading-[1.55] text-[#6c6d70] sm:text-[15px]">
+        <div className="mt-6 max-w-[760px] space-y-4 text-[clamp(13px,1vw,16px)] leading-[1.6] text-[#6c6d70]">
           <p>At Maharashtra Bag, we are committed to manufacturing premium-quality bags that meet the evolving needs of businesses across diverse industries. With advanced production facilities, skilled craftsmanship, and strict quality control, we provide customized bag manufacturing solutions designed for durability, functionality, and brand visibility.</p>
           <p>Whether you require reusable shopping bags, promotional bags, packaging bags, or custom-printed bags, our team ensures every product is manufactured with precision and delivered on time.</p>
         </div>
@@ -28,7 +28,7 @@ const Aboutus = () => (
       </div>
 
       <div className="justify-self-center lg:justify-self-end">
-        <img src={aboutImage} alt="Maharashtra Bags manufacturing team" className="h-auto w-full max-w-[500px] rounded-[18px] object-cover lg:w-[510px]" />
+        <img src={aboutImage} alt="Maharashtra Bags manufacturing team" className="h-auto w-full max-w-[760px] rounded-[18px] object-cover" />
       </div>
     </div>
   </section>

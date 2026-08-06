@@ -49,10 +49,10 @@ const AnimatedStat = ({ value, suffix, label, sublabel }) => {
 
   return (
     <div ref={statRef} className="min-w-0 text-center">
-      <strong className="block whitespace-nowrap text-[27px] font-semibold leading-none text-[#ff6712] sm:text-[30px] lg:text-[32px]">
+      <strong className="block whitespace-nowrap text-[clamp(27px,2vw,38px)] font-semibold leading-none text-[#ff6712]">
         {displayValue.toLocaleString('en-IN')}{suffix}
       </strong>
-      <p className="mt-3 text-[11px] leading-[1.65] text-[#65666a] sm:text-[12px]">
+      <p className="mt-3 text-[clamp(11px,.78vw,14px)] leading-[1.65] text-[#65666a]">
         {label}{sublabel && <><br />{sublabel}</>}
       </p>
     </div>
@@ -61,7 +61,7 @@ const AnimatedStat = ({ value, suffix, label, sublabel }) => {
 
 const Stats = () => (
   <section className="bg-[#f6f5ed] px-2 py-4 sm:px-[15px]" aria-label="Company statistics">
-    <div className="mx-auto grid max-w-[1410px] grid-cols-2 items-center gap-x-5 gap-y-9 rounded-[16px] bg-white px-5 py-9 sm:px-10 md:grid-cols-5 md:gap-5 lg:min-h-[164px] lg:px-[66px] lg:py-7">
+    <div className="mx-auto grid w-full max-w-[1880px] grid-cols-2 items-center gap-x-5 gap-y-9 rounded-[16px] bg-white px-5 py-9 sm:grid-cols-3 sm:px-[4%] md:grid-cols-5 md:gap-5 lg:min-h-[150px] lg:py-[clamp(28px,2.3vw,44px)]">
       {stats.map((stat) => <AnimatedStat key={stat.label} {...stat} />)}
     </div>
   </section>

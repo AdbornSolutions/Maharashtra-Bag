@@ -9,13 +9,13 @@ const reasons = [
 
 const WhyChooseus = () => (
   <section className="bg-[#f6f5ed] px-2 pb-2 sm:px-[15px] sm:pb-[15px]">
-    <div className="mx-auto max-w-[1410px] rounded-[20px] bg-white px-5 py-10 sm:px-10 lg:min-h-[800px] lg:px-[66px] lg:py-[60px]">
+    <div className="mx-auto w-full max-w-[1880px] rounded-[20px] bg-white px-5 py-12 sm:px-[4%] sm:py-14 lg:px-[4%] lg:py-[clamp(60px,5vw,90px)]">
       <div className="text-center">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d9dd] px-3 py-1 text-[11px] font-medium text-[#1d2b43]"><span className="size-1.5 rounded-full bg-[#ff7900]" /> Why Choose Us</span>
-        <h2 className="mx-auto mt-3 max-w-[650px] text-[32px] font-bold leading-[.96] tracking-[-.05em] text-[#202d42] sm:text-[44px] lg:text-[52px]">Manufacturing Excellence<br />That Builds Trust</h2>
+        <h2 className="mx-auto mt-3 max-w-[850px] text-[clamp(32px,7.5vw,44px)] font-bold leading-[.98] tracking-[-.05em] text-[#202d42] md:text-[clamp(42px,3.2vw,62px)]">Manufacturing Excellence<br />That Builds Trust</h2>
       </div>
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-[.88fr_1.12fr] lg:gap-10">
+      <div className="mt-10 grid gap-6 md:grid-cols-[.88fr_1.12fr] lg:gap-[clamp(32px,3vw,60px)]">
         <article className="overflow-hidden rounded-[14px] bg-[#f6f5ed] p-2 sm:p-3 lg:self-start">
           <img src={premiumBag} alt="Premium quality bag material" className="aspect-[1.42] w-full rounded-[10px] object-cover" />
           <div className="p-3 sm:p-4 lg:p-3 lg:pt-5">
@@ -24,11 +24,11 @@ const WhyChooseus = () => (
           </div>
         </article>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:gap-7">
+        <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 lg:gap-7">
           {reasons.map((reason) => (
-            <article key={reason.number} className="min-h-[205px] rounded-[14px] bg-[#f6f5ed] p-5 sm:p-6">
+            <article key={reason.number} className="flex min-h-[205px] flex-col rounded-[14px] bg-[#f6f5ed] p-5 sm:p-6 lg:p-[clamp(22px,1.7vw,32px)]">
               <div className="flex items-center justify-between"><span className="grid size-10 place-items-center rounded-full bg-[#ff7900] text-xl text-white">{reason.icon}</span><span className="text-[23px] font-bold leading-none text-[#202020]">{reason.number}</span></div>
-              <div className="mt-10 border-t border-[#deded7] pt-5"><h3 className="text-[16px] font-bold text-[#202020]">{reason.title}</h3><p className="mt-2 max-w-[230px] text-[12px] leading-[1.45] text-[#77787b]">{reason.text}</p></div>
+              <div className="mt-auto border-t border-[#deded7] pt-5"><h3 className="text-[clamp(15px,1vw,18px)] font-bold text-[#202020]">{reason.title}</h3><p className="mt-2 max-w-[340px] text-[clamp(12px,.8vw,14px)] leading-[1.5] text-[#77787b]">{reason.text}</p></div>
             </article>
           ))}
         </div>

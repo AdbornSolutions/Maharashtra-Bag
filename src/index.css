@@ -60,16 +60,16 @@ textarea {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  gap: clamp(38px, 4.15vw, 68px);
-  padding-right: clamp(38px, 4.15vw, 68px);
+  gap: clamp(32px, 4.15vw, 80px);
+  padding-right: clamp(32px, 4.15vw, 80px);
   animation: company-logo-scroll 42s linear infinite;
   will-change: transform;
 }
 
 .company-logo-tile {
   display: flex;
-  width: clamp(92px, 8.5vw, 132px);
-  height: 76px;
+  width: clamp(88px, 8.5vw, 155px);
+  height: clamp(64px, 5vw, 92px);
   flex-shrink: 0;
   align-items: center;
   justify-content: center;

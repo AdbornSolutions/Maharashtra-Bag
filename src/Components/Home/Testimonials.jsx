@@ -21,14 +21,14 @@ const testimonials = [
 
 const Testimonials = () => (
   <section className="bg-[#f6f5ed] px-2 pb-2 sm:px-[15px] sm:pb-[15px]">
-    <div className="mx-auto max-w-[1410px] overflow-hidden rounded-[20px] bg-white px-5 py-12 sm:px-10 lg:min-h-[749px] lg:px-[66px] lg:py-[70px]">
+    <div className="mx-auto w-full max-w-[1880px] overflow-hidden rounded-[20px] bg-white px-5 py-12 sm:px-[4%] sm:py-14 lg:px-[4%] lg:py-[clamp(60px,5vw,90px)]">
       <div className="text-center">
         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d9dd] px-3 py-1 text-[11px] font-medium text-[#1d2b43]"><span className="size-1.5 rounded-full bg-[#ff7900]" /> Our Testimonials</span>
-        <h2 className="mt-4 text-[34px] font-bold leading-none tracking-[-.05em] text-[#202d42] sm:text-[44px] lg:text-[52px]">What Our Clients Say</h2>
+        <h2 className="mt-4 text-[clamp(34px,7.5vw,44px)] font-bold leading-none tracking-[-.05em] text-[#202d42] md:text-[clamp(42px,3.2vw,62px)]">What Our Clients Say</h2>
       </div>
-      <div className="relative mt-9 grid gap-5 lg:mt-10 lg:grid-cols-3 lg:gap-8">
+      <div className="relative mt-9 grid gap-5 md:grid-cols-2 lg:mt-10 xl:grid-cols-3 lg:gap-[clamp(22px,2.2vw,42px)]">
         {testimonials.map((testimonial) => (
-          <article key={testimonial.client} className="flex min-h-[295px] flex-col rounded-[14px] bg-[#f6f5ed] p-5 sm:p-6 lg:min-h-[431px] lg:p-7">
+          <article key={testimonial.client} className="flex min-h-[295px] flex-col rounded-[14px] bg-[#f6f5ed] p-5 sm:p-6 lg:min-h-[360px] lg:p-[clamp(26px,2vw,38px)]">
             <div className="flex gap-1">
               {Array.from({ length: testimonial.stars }, (_, index) => <span key={index} className="grid size-[18px] place-items-center rounded-sm bg-[#ff7900] text-[12px] text-white">★</span>)}
             </div>

@@ -32,13 +32,13 @@ const LogoTrack = ({ hidden = false }) => (
 )
 
 const CompanyLogos = () => (
-  <section className="overflow-hidden bg-[#f6f5ed] py-14 sm:py-16 lg:py-[72px]" aria-labelledby="company-logos-heading">
-    <div className="mx-auto max-w-[920px] px-5 text-center">
+  <section className="overflow-hidden bg-[#f6f5ed] py-14 sm:py-16 lg:py-[clamp(64px,6vw,105px)]" aria-labelledby="company-logos-heading">
+    <div className="mx-auto max-w-[1100px] px-5 text-center sm:px-[4%]">
       <span className="inline-flex items-center gap-1.5 rounded-full border border-[#d8d6cb] px-3 py-1 text-[11px] font-medium text-[#1d2b43]">
         <span className="size-1.5 rounded-full bg-[#ff7900]" />
         Trusted by Leading Businesses
       </span>
-      <h2 id="company-logos-heading" className="mx-auto mt-3 max-w-[710px] text-[32px] font-bold leading-[0.98] text-[#202d42] sm:text-[42px] lg:text-[48px]">
+      <h2 id="company-logos-heading" className="mx-auto mt-3 max-w-[900px] text-[clamp(32px,7.5vw,44px)] font-bold leading-[0.98] text-[#202d42] md:text-[clamp(40px,3vw,58px)]">
         Preferred Manufacturing Partner<br className="hidden sm:block" /> for Businesses Across Industries
       </h2>
     </div>
