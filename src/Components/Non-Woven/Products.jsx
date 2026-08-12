@@ -1,6 +1,6 @@
 import ProductGallery from '../Common/ProductGallery'
 
-const images = import.meta.glob('../../assets/maha-bags-products/non-woven/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' })
+const images = import.meta.glob('../../assets/maha-products/Non-woven/*.{jpg,jpeg,png,webp}', { eager: true, import: 'default' })
 
 const Products = () => <ProductGallery imageModules={images} productType="non-woven" heading="A Non-Woven Bag for Every Commercial Requirement" />
 
