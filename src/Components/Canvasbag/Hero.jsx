@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../Common/Navbar'
-import heroProduct from '../../assets/CanvasBags/HeroProducts.png'
+import heroProduct from '../../assets/CanvasBags/hero1.png'
 import quoteIcon from '../../assets/Icons/Icon.png'
 
 const features = ['Premium Cotton Canvas', 'Custom Printing', 'OEM & Private Label', 'Worldwide Shipping']

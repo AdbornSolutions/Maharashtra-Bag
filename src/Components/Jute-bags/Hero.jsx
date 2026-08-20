@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../Common/Navbar'
-import heroProduct from '../../assets/Jute-bags/Hero.png'
+import heroProduct from '../../assets/Jute-bags/hero1.png'
 import quoteIcon from '../../assets/Icons/Icon.png'
 
 const features = ['Natural Jute Fibre', 'Custom Printing', 'Bulk Manufacturing', 'Sustainable Packaging']
