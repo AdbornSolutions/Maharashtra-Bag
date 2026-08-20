@@ -1,4 +1,4 @@
-import premiumBag from '../../assets/Images/premiumbag.png'
+import qualityVideo from '../../assets/Videos/quality.mp4'
 
 const reasons = [
   { number: '01', icon: '☼', title: 'Custom Manufacturing', text: 'Tailored bag solutions with custom sizes, colors, handles, and branding.' },
@@ -17,7 +17,16 @@ const WhyChooseus = () => (
 
       <div className="mt-10 grid gap-6 md:grid-cols-[.88fr_1.12fr] lg:gap-[clamp(32px,3vw,60px)]">
         <article className="overflow-hidden rounded-[14px] bg-[#f6f5ed] p-2 sm:p-3 lg:self-start">
-          <img src={premiumBag} alt="Premium quality bag material" className="aspect-[1.42] w-full rounded-[10px] object-cover" />
+          <video
+            className="aspect-[1.42] w-full rounded-[10px] object-cover"
+            src={qualityVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Premium quality bag manufacturing"
+          />
           <div className="p-3 sm:p-4 lg:p-3 lg:pt-5">
             <div className="flex gap-3"><span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#ff7900] text-xl text-white">▣</span><div><h3 className="text-[17px] font-bold text-[#202020]">Premium Quality Materials</h3><p className="mt-2 text-[12px] leading-[1.45] text-[#77787b]">Carefully sourced raw materials ensure superior durability and long-lasting performance.</p></div></div>
             <div className="mt-6 flex items-center gap-3 border-t border-[#deded7] pt-5 text-[12px] font-semibold text-[#202020]"><span>Read More</span><span className="grid size-4 place-items-center rounded-full bg-[#1d3765] text-[10px] text-white">›</span></div>

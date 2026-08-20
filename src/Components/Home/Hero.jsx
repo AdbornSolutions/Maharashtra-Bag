@@ -1,6 +1,6 @@
 import Navbar from '../Common/Navbar'
 import { Link } from 'react-router-dom'
-import heroBackground from '../../assets/Images/HeroBg.png'
+import heroVideo from '../../assets/Videos/maharashtrabags.mp4'
 import quoteIcon from '../../assets/Icons/Icon.png'
 
 const benefits = ['Premium Quality Materials', 'Custom Printing & Branding', 'Bulk Manufacturing', 'PAN India Supply']
@@ -8,9 +8,20 @@ const benefits = ['Premium Quality Materials', 'Custom Printing & Branding', 'Bu
 const Hero = () => (
   <section id="home" className="px-2 pt-2 sm:px-[1%] sm:pt-2.5">
     <div
-      className="relative min-h-[700px] overflow-hidden rounded-2xl bg-cover bg-[58%_center] text-white sm:min-h-[720px] lg:h-[calc(100svh-20px)] lg:min-h-[650px] lg:max-h-[1000px] lg:bg-center"
-      style={{ backgroundImage: `linear-gradient(90deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.58) 48%, rgba(0,0,0,.18) 100%), url(${heroBackground})` }}
+      className="relative min-h-[700px] overflow-hidden rounded-2xl bg-black text-white sm:min-h-[720px] lg:h-[calc(100svh-20px)] lg:min-h-[650px] lg:max-h-[1000px]"
     >
+      <video
+        className="absolute inset-0 size-full object-cover"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.86)_0%,rgba(0,0,0,.58)_48%,rgba(0,0,0,.18)_100%)]" />
+
       <Navbar variant="transparent" fluid />
 
       <div className="relative z-10 flex min-h-[700px] flex-col justify-center px-6 pb-44 pt-28 sm:min-h-[720px] sm:px-[4%] sm:pb-40 sm:pt-32 lg:h-full lg:min-h-0 lg:px-[4%] lg:pb-[110px] lg:pt-[110px]">

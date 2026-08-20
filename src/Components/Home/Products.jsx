@@ -7,10 +7,10 @@ import productThree from '../../assets/Images/Products/3.png'
 import productFour from '../../assets/Images/Products/4.png'
 
 const products = [
-  { name: 'BOPP Bag - 1', material: 'Polypropylene plastic', image: productOne, to: '/bopp-bags' },
-  { name: 'Jute Bag - 1', material: 'Jute fabric', image: productTwo, to: '/jute-bags' },
   { name: 'Canvas Bag - 1', material: 'Cotton canvas', image: productThree, to: '/canvas-bags' },
   { name: 'Non-woven Bag - 1', material: 'Polyester fibers', image: productFour, to: '/non-woven' },
+  { name: 'Jute Bag - 1', material: 'Jute fabric', image: productTwo, to: '/jute-bags' },
+  { name: 'BOPP Bag - 1', material: 'Polypropylene plastic', image: productOne, to: '/bopp-bags' },
 ]
 
 const Products = () => {

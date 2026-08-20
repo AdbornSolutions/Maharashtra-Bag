@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  min-width: 280px;
   background-color: #f6f5ed;
   color: #202d42;
   font-family: "Poppins", Arial, sans-serif;
@@ -14,12 +15,33 @@ html {
   overflow-x: clip;
 }
 
+#root {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-img {
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+img,
+video {
   display: block;
+}
+
+main,
+section,
+article,
+form,
+nav {
+  min-width: 0;
 }
 
 button,
@@ -68,8 +90,8 @@ textarea {
 
 .company-logo-tile {
   display: flex;
-  width: clamp(88px, 8.5vw, 155px);
-  height: clamp(64px, 5vw, 92px);
+  width: clamp(98px, calc(8.5vw + 10px), 165px);
+  height: clamp(74px, calc(5vw + 10px), 102px);
   flex-shrink: 0;
   align-items: center;
   justify-content: center;

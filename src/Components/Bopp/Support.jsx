@@ -1,4 +1,4 @@
-import supportImage from '../../assets/CanvasBags/support.jpg'
+import supportVideo from '../../assets/Videos/Support.mp4'
 
 const capabilities = [
   'OEM production',
@@ -12,10 +12,10 @@ const capabilities = [
 ]
 
 const metrics = [
-  { value: '25', suffix: '+', label: 'Countries Served' },
-  { value: '12M', suffix: '+', label: 'Bags Manufactured' },
-  { value: '18 yrs', suffix: '', label: 'Manufacturing Experience' },
-  { value: '99', suffix: '%', label: 'On-Time Dispatch' },
+   { value: '25', suffix: '+', label: 'Countries Served' },
+  { value: '2M', suffix: '+', label: 'Bags Manufactured' },
+  { value: '35', suffix: '+', label: 'Years of Manufacturing Experience' },
+  { value: '90', suffix: '%', label: 'On-Time Dispatch' },
 ]
 
 const Support = () => (
@@ -44,7 +44,16 @@ const Support = () => (
       </div>
 
       <div>
-        <img src={supportImage} alt="Export-ready non-woven bag orders prepared in a warehouse" className="aspect-[1.49] w-full rounded-[18px] object-cover" />
+        <video
+          className="aspect-[1.49] w-full rounded-[18px] object-cover"
+          src={supportVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Global bag manufacturing and export support"
+        />
         <div className="mt-6 grid grid-cols-2">
           {metrics.map((metric, index) => (
             <div key={metric.label} className={`min-h-[115px] px-4 py-5 sm:px-6 ${index % 2 === 1 ? 'border-l border-white/10' : ''} ${index > 1 ? 'border-t border-white/10' : ''}`}>

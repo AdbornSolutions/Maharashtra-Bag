@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo2.png'
 
 const quickLinks = [
   { label: 'Home', to: '/' },
@@ -30,7 +30,7 @@ const Footer = () => (
     <div className="mx-auto max-w-[1260px]">
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.55fr_0.58fr_0.84fr_1fr] lg:gap-12">
         <div>
-          <img src={logo} alt="Maharashtra Bags" className="h-20 w-full max-w-[259px] rounded-xl object-contain" />
+          <img src={logo} alt="Maharashtra Bags" className="h-20 w-auto max-w-[260px] rounded-xl object-contain object-left" />
           <h2 className="mt-7 text-xl font-semibold">About Company.</h2>
           <p className="mt-2 max-w-[315px] text-[16px] leading-[1.45] text-[#ebedf1] sm:text-[17px]">We create durable, eco-friendly jute, canvas, non-woven, and BOPP bags that combine quality with sustainability.</p>
         </div>

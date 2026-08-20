@@ -1,15 +1,24 @@
 import Navbar from '../Common/Navbar'
 import { Link } from 'react-router-dom'
-import heroImage from '../../assets/About/Hero.png'
+import heroVideo from '../../assets/Videos/Aboutusvideo.mp4'
 
 const Hero = () => (
   <section className="bg-[#f6f5ed] px-2 pt-2 sm:px-[1%] sm:pt-2.5" aria-labelledby="about-page-title">
     <div
-      className="relative mx-auto min-h-[500px] w-full max-w-[1880px] overflow-hidden rounded-[18px] bg-cover bg-[60%_center] text-white sm:min-h-[560px] lg:h-[clamp(580px,42vw,760px)] lg:min-h-0 lg:bg-center"
-      style={{
-        backgroundImage: `linear-gradient(90deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.62) 35%, rgba(0,0,0,.18) 72%, rgba(0,0,0,.08) 100%), url(${heroImage})`,
-      }}
+      className="relative mx-auto min-h-[500px] w-full max-w-[1880px] overflow-hidden rounded-[18px] bg-black text-white sm:min-h-[560px] lg:h-[clamp(580px,42vw,760px)] lg:min-h-0"
     >
+      <video
+        className="absolute inset-0 size-full object-cover"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.86)_0%,rgba(0,0,0,.62)_35%,rgba(0,0,0,.18)_72%,rgba(0,0,0,.08)_100%)]" />
+
       <Navbar variant="transparent" fluid />
 
       <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-14 sm:px-[4%] sm:pb-16 lg:pb-[clamp(64px,5vw,90px)]">

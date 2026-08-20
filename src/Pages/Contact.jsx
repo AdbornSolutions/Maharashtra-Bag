@@ -68,11 +68,11 @@ const Contact = () => {
 
             <div className="mt-14 space-y-9">
               {contactItems.map((item) => (
-                <div key={item.title} className="flex gap-5">
+                <div key={item.title} className="flex min-w-0 gap-5">
                   <span className="grid size-10 shrink-0 place-items-center rounded-[10px] bg-[#ffe1c9] text-[#ff6b13]">
                     <svg viewBox="0 0 24 24" className="size-5 fill-none stroke-current" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{item.icon}</svg>
                   </span>
-                  <div className="text-[13px] leading-[1.55] text-[#606166]">
+                  <div className="min-w-0 break-words text-[13px] leading-[1.55] text-[#606166]">
                     <h3 className="mb-1.5 font-bold text-[#303136]">{item.title}</h3>
                     {item.content}
                   </div>
