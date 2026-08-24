@@ -39,12 +39,12 @@ const Gallery = () => (
   <main className="min-h-screen bg-[#f6f5ed] text-[#202d42]">
     <Navbar variant="light" />
 
-    <section className="px-5 pb-12 pt-14 text-center sm:px-8 sm:pb-16 sm:pt-20" aria-labelledby="gallery-title">
+    <section className="px-4 pb-10 pt-12 text-center min-[360px]:px-5 sm:px-8 sm:pb-16 sm:pt-20" aria-labelledby="gallery-title">
       <span className="inline-flex items-center gap-2 rounded-full border border-[#d8d6cb] bg-white px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[.16em]">
         <span className="size-1.5 rounded-full bg-[#ff7900]" />
         Our Work
       </span>
-      <h1 id="gallery-title" className="mx-auto mt-5 max-w-4xl text-[clamp(42px,8vw,76px)] font-bold leading-[.98] tracking-[-.05em]">
+      <h1 id="gallery-title" className="mx-auto mt-5 max-w-4xl text-[clamp(36px,8vw,76px)] font-bold leading-[.98] tracking-[-.05em]">
         Product Gallery
       </h1>
       <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#657083] sm:text-base">
@@ -54,7 +54,7 @@ const Gallery = () => (
 
     <div className="space-y-4 px-2 pb-4 sm:px-[15px] sm:pb-[15px]">
       {productGroups.map((group) => (
-        <section key={group.category} className="mx-auto w-full max-w-[1880px] rounded-[20px] bg-white px-5 py-12 sm:px-[4%] sm:py-14" aria-labelledby={`gallery-${group.category}-heading`}>
+        <section key={group.category} className="mx-auto w-full max-w-[1880px] rounded-[20px] bg-white px-4 py-10 min-[360px]:px-5 sm:px-[4%] sm:py-14" aria-labelledby={`gallery-${group.category}-heading`}>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <span className="text-xs font-bold uppercase tracking-[.18em] text-[#ff7900]">Product Collection</span>
@@ -65,7 +65,7 @@ const Gallery = () => (
             <p className="text-sm font-medium text-[#657083]">{group.images.length} designs</p>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-8 grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 sm:gap-5 md:grid-cols-3 xl:grid-cols-4">
             {group.images.map(([filePath, image], index) => (
               <figure key={filePath} className="group overflow-hidden rounded-[16px] bg-[#ebe9e1]">
                 <img
@@ -81,7 +81,7 @@ const Gallery = () => (
         </section>
       ))}
 
-      <section className="mx-auto w-full max-w-[1880px] rounded-[20px] bg-[#202d42] px-5 py-12 text-white sm:px-[4%] sm:py-14" aria-labelledby="gallery-videos-heading">
+      <section className="mx-auto w-full max-w-[1880px] rounded-[20px] bg-[#202d42] px-4 py-10 text-white min-[360px]:px-5 sm:px-[4%] sm:py-14" aria-labelledby="gallery-videos-heading">
         <span className="text-xs font-bold uppercase tracking-[.18em] text-[#ff7900]">Behind The Scenes</span>
         <h2 id="gallery-videos-heading" className="mt-2 text-[clamp(30px,5vw,48px)] font-bold tracking-[-.04em]">
           Bags We Manufacturerd
@@ -93,7 +93,9 @@ const Gallery = () => (
             <article key={filePath} className="overflow-hidden rounded-[16px] bg-white/5 p-2">
               <video
                 src={video}
-                controls
+                autoPlay
+                muted
+                loop
                 playsInline
                 preload="metadata"
                 className="aspect-video w-full rounded-[12px] bg-black object-cover"
