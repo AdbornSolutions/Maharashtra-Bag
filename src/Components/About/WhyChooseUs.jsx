@@ -1,6 +1,6 @@
 import qualityVideo from '../../assets/Videos/quality.mp4'
 
-const reasons = [
+const reasons = [ 
   { number: '01', icon: '☼', title: 'Custom Manufacturing', text: 'Tailored bag solutions with custom sizes, colors, handles, and branding.' },
   { number: '02', icon: '✚', title: 'Advanced Printing', text: 'High-quality printing techniques that enhance your brand visibility.' },
   { number: '03', icon: '◎', title: 'Competitive Pricing', text: 'Cost-effective manufacturing without compromising product quality.' },
