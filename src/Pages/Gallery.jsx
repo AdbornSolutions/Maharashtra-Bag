@@ -84,7 +84,7 @@ const Gallery = () => (
       <section className="mx-auto w-full max-w-[1880px] rounded-[20px] bg-[#202d42] px-5 py-12 text-white sm:px-[4%] sm:py-14" aria-labelledby="gallery-videos-heading">
         <span className="text-xs font-bold uppercase tracking-[.18em] text-[#ff7900]">Behind The Scenes</span>
         <h2 id="gallery-videos-heading" className="mt-2 text-[clamp(30px,5vw,48px)] font-bold tracking-[-.04em]">
-          Bags in Production
+          Bags We Manufacturerd
         </h2>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-[#bbc3d0]">Real footage from our bag manufacturing and finished-product collection.</p>
 

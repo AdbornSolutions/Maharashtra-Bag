@@ -34,7 +34,7 @@ const Navbar = ({ variant = 'default', fluid = false }) => {
     <header className={`${isTransparent ? 'absolute inset-x-0 top-0 border-b border-white/10 bg-black/20 text-white' : isLight ? 'relative border-b border-[#e4e7eb] bg-white text-[#17243b]' : 'sticky top-0 border-b border-white/10 bg-black text-white'} ${fluid ? 'lg:px-[4%]' : 'lg:px-[5.3%]'} z-50 w-full px-3 py-3 sm:px-8 lg:py-5`}>
       <nav className={`${fluid ? 'w-full max-w-none' : 'mx-auto max-w-[1260px]'} flex items-center justify-between gap-3 sm:gap-5`} aria-label="Main navigation">
         <Link to="/" className="shrink-0" aria-label="Maharashtra Bags home">
-          <img src={logo} alt="Maharashtra Bags" className="h-[48px] w-[136px] rounded-xl object-contain min-[360px]:h-[52px] min-[360px]:w-[155px] sm:h-[68px] sm:w-[210px] lg:h-[80px] lg:w-[270px]" />
+          <img src={logo} alt="Maharashtra Bags" className="h-[62px] w-[158px] rounded-xl object-contain min-[360px]:h-[66px] min-[360px]:w-[176px] sm:h-[84px] sm:w-[238px] lg:h-[96px] lg:w-[310px]" />
         </Link>
 
         <div className="hidden flex-1 items-center justify-end gap-7 lg:flex xl:gap-8">
