@@ -11,7 +11,7 @@ const Hero = () => (
       <Navbar variant="light" fluid />
 
       <div className="mx-auto grid w-full max-w-[1800px] gap-10 px-6 pb-12 pt-12 sm:px-[4%] md:grid-cols-[1.05fr_.95fr] md:items-center lg:min-h-[clamp(680px,48vw,860px)] lg:gap-[clamp(56px,6vw,115px)] lg:pb-[clamp(54px,4vw,74px)] lg:pt-[clamp(44px,3vw,64px)]">
-        <div>
+        <div className="order-2 md:order-1">
           <h1 id="jute-hero-title" className="max-w-[850px] text-[clamp(40px,10vw,52px)] font-bold leading-[1.06] text-[#1c3158] md:text-[clamp(46px,3.8vw,72px)]">
             Eco-Friendly Jute Bags Crafted for Sustainable Packaging
           </h1>
@@ -34,7 +34,7 @@ const Hero = () => (
           </div>
         </div>
 
-        <div className="mx-auto w-full max-w-[760px] md:justify-self-end">
+        <div className="order-1 mx-auto w-full max-w-[760px] md:order-2 md:justify-self-end">
           <img src={heroProduct} alt="Eco-friendly natural jute shopping bag" className="h-auto w-full rounded-[20px] object-cover" />
         </div>
       </div>
