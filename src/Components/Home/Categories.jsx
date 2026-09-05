@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import canvasBag from '../../assets/Images/p1.png'
-import nonWovenBag from '../../assets/Images/p2.png'
-import juteBag from '../../assets/Images/p3.png'
-import boppBag from '../../assets/Images/p4.png'
+import canvasBag from '../../assets/new/2.png'
+import nonWovenBag from '../../assets/new/3.png'
+import juteBag from '../../assets/new/4.png'
+import boppBag from '../../assets/new/5.png'
 
 const categories = [
   { name: 'Canvas bag', image: canvasBag, href: '/canvas-bags' },
